@@ -8,6 +8,12 @@ public class DogUser {
 //		snoopy.move();
 		
 		System.out.println("This is " + Thread.currentThread().getName());
+		
+		Cat snow = new Cat();
+		Thread snowThread = new Thread(snow);
+		snowThread.setName("Snow");
+		snowThread.start();
+		
 		DogThread snoopy = new DogThread("Snoopy");
 		snoopy.start();
 		
