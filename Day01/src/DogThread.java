@@ -1,5 +1,9 @@
-public class DogThread extends Thread{
+public class DogThread extends Thread {
 
+	public DogThread(String name) {
+		this.setName(name);
+	}
+	
 	@Override
 	public void run() {
 		while(true) {
@@ -14,11 +18,11 @@ public class DogThread extends Thread{
 	}
 	
 	private void walk() {
-		System.out.println("Walking in " + Thread.currentThread().getName());
+		System.out.println(Thread.currentThread().getName() + " walking");
 	}
 	
 	private void wag() {
-		System.out.println("Wagging in " + Thread.currentThread().getName());
+		System.out.println(Thread.currentThread().getName() + " wagging");
 	}
 	
 }
